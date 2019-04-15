@@ -1,0 +1,15 @@
+{
+  "name": "entria-frontend-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mateusmforte",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-native": "^0.59.4"
+  }
+}
