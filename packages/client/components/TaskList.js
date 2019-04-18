@@ -48,7 +48,6 @@ export default class TaskList extends Component{
     
     render(){
         return(
-            <View>
               <FlatList 
                 data={tasks}
                 keyExtractor={ (tasks) => String(tasks.id)}
@@ -60,9 +59,6 @@ export default class TaskList extends Component{
                  }
                 }
             />
-            </View>
-          
-   
 		)  
 	}
 }
