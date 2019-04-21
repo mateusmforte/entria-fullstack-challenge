@@ -1,0 +1,22 @@
+.main-header{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tasks-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0px 12px -8px black;
+}
+.tasks{
+    width: 80%;
+}
+
+.tasks h3{
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.tasks p{
+    font-family: 'Inconsolata', monospace;
+}

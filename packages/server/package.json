@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "mateusmforte",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "global": "^4.3.2",
+    "graphql": "^14.2.1",
+    "koa": "^2.7.0",
+    "koa-graphql": "^0.8.0",
+    "koa-mount": "^4.0.0",
+    "mongoose": "^5.5.2",
+    "nodemon": "^1.18.11"
+  }
+}

@@ -1,0 +1,17 @@
+type Query {
+    viewer: Task
+    node(
+        id: ID!
+    ): Node
+}
+
+query TaskQuery{
+    viewer{
+        id
+    }
+}
+type Task{
+    id: String!,
+    title: String!,
+    description: String!
+}
