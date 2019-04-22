@@ -6,12 +6,10 @@ const schema = require('./schema');
 
 const app = new Koa();
 
-initDB();
-
 app.use(mount('/graphql', graphqlHTTP({
     schema: schema,
     graphiql: true
 })))
-
+initDB();
 app.listen(5500);
 console.log('Server on');

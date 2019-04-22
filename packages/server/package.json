@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "author": "mateusmforte",
   "license": "MIT",
   "private": true,
@@ -13,5 +13,8 @@
     "koa-mount": "^4.0.0",
     "mongoose": "^5.5.2",
     "nodemon": "^1.18.11"
+  },
+  "scripts": {
+    "server-start": "node server.js" 
   }
 }

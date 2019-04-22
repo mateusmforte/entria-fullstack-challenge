@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
-const dbUrl = 'mongodb+srv://tecchyno:RfHMRr8RU5DRYQ7j@cluster0-v0il4.gcp.mongodb.net/test?retryWrites=true'
+const dbUrl = 'mongodb+srv://tecchyno:RfHMRr8RU5DRYQ7j@cluster0-v0il4.gcp.mongodb.net/Tasks?retryWrites=true';
+
+
 const initDB = () => {
     const db = mongoose.connection;
     mongoose.connect(
