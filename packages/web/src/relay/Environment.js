@@ -3,13 +3,13 @@ import {
     Network,
     RecordSource,
     Store
-} from 'react-relay'
+} from 'relay-runtime'
 
 function fetchQuery (request,variables) {
-    return fetch('/graphql',{
+    return fetch('http://localhost:5500/graphql',{
         method: 'POST',
         headers: {
-            'Content-type':'application/json',
+            'Content-type':'application/json'
         },
         body: JSON.stringify({
             query: request.text,

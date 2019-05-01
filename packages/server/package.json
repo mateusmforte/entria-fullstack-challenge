@@ -9,12 +9,16 @@
     "global": "^4.3.2",
     "graphql": "^14.2.1",
     "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-cors": "^0.0.16",
     "koa-graphql": "^0.8.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.0",
     "koa-mount": "^4.0.0",
     "mongoose": "^5.5.2",
     "nodemon": "^1.18.11"
   },
   "scripts": {
-    "server-start": "node server.js" 
+    "server-start": "node server.js"
   }
 }

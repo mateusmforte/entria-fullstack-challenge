@@ -1,17 +1,11 @@
-type Query {
-    viewer: Task
-    node(
-        id: ID!
-    ): Node
+schema{
+    query: getTasks
 }
-
-query TaskQuery{
-    viewer{
-        id
-    }
+type getTasks{
+    tasks: [tasks]
 }
-type Task{
-    id: String!,
+type tasks{
+    _id:ID!,
     title: String!,
     description: String!
 }

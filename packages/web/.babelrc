@@ -1,5 +1,7 @@
 {
     "plugins": [
         "relay"
-    ]
+    ],
+    "presets": ["flow"]
+    
 }
