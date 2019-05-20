@@ -6,17 +6,15 @@ import TaskList from "./components/TaskList";
 
 import "./css/main.css";
 
+
+
 const renderTaskQuery = ({ error, props }) => {
   if (error) {
     return <div>Error!</div>;
   } else if (props) {
     return (
-      <TaskList
-        key={props.tasks._id}
-        title={props.tasks.title}
-        description={props.tasks.description}
-      />
-    );
+      <TaskList tasks={props.tasks}/>
+    )
   }
   return <div>Carregando Tarefas...</div>;
 };
@@ -32,7 +30,8 @@ class App extends Component {
               query AppQuery {
                 tasks {
                   _id
-                  ...TaskList_task
+                  title
+                  description
                 }
               }
             `}

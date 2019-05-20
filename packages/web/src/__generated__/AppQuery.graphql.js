@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 88e6cdb4b71ec4dc24949c49be6c9287
+ * @relayHash d485482b790d8bfe50e51411cc50e81b
  */
 
 /* eslint-disable */
@@ -9,12 +9,12 @@
 
 /*::
 import type { ConcreteRequest } from 'relay-runtime';
-type TaskList_task$ref = any;
 export type AppQueryVariables = {||};
 export type AppQueryResponse = {|
   +tasks: ?$ReadOnlyArray<?{|
     +_id: string,
-    +$fragmentRefs: TaskList_task$ref,
+    +title: string,
+    +description: string,
   |}>
 |};
 export type AppQuery = {|
@@ -28,24 +28,47 @@ export type AppQuery = {|
 query AppQuery {
   tasks {
     _id
-    ...TaskList_task
+    title
+    description
   }
-}
-
-fragment TaskList_task on tasks {
-  title
-  description
 }
 */
 
 const node/*: ConcreteRequest*/ = (function(){
-var v0 = {
-  "kind": "ScalarField",
-  "alias": null,
-  "name": "_id",
-  "args": null,
-  "storageKey": null
-};
+var v0 = [
+  {
+    "kind": "LinkedField",
+    "alias": null,
+    "name": "tasks",
+    "storageKey": null,
+    "args": null,
+    "concreteType": "tasks",
+    "plural": true,
+    "selections": [
+      {
+        "kind": "ScalarField",
+        "alias": null,
+        "name": "_id",
+        "args": null,
+        "storageKey": null
+      },
+      {
+        "kind": "ScalarField",
+        "alias": null,
+        "name": "title",
+        "args": null,
+        "storageKey": null
+      },
+      {
+        "kind": "ScalarField",
+        "alias": null,
+        "name": "description",
+        "args": null,
+        "storageKey": null
+      }
+    ]
+  }
+];
 return {
   "kind": "Request",
   "fragment": {
@@ -54,68 +77,23 @@ return {
     "type": "getTasks",
     "metadata": null,
     "argumentDefinitions": [],
-    "selections": [
-      {
-        "kind": "LinkedField",
-        "alias": null,
-        "name": "tasks",
-        "storageKey": null,
-        "args": null,
-        "concreteType": "tasks",
-        "plural": true,
-        "selections": [
-          (v0/*: any*/),
-          {
-            "kind": "FragmentSpread",
-            "name": "TaskList_task",
-            "args": null
-          }
-        ]
-      }
-    ]
+    "selections": (v0/*: any*/)
   },
   "operation": {
     "kind": "Operation",
     "name": "AppQuery",
     "argumentDefinitions": [],
-    "selections": [
-      {
-        "kind": "LinkedField",
-        "alias": null,
-        "name": "tasks",
-        "storageKey": null,
-        "args": null,
-        "concreteType": "tasks",
-        "plural": true,
-        "selections": [
-          (v0/*: any*/),
-          {
-            "kind": "ScalarField",
-            "alias": null,
-            "name": "title",
-            "args": null,
-            "storageKey": null
-          },
-          {
-            "kind": "ScalarField",
-            "alias": null,
-            "name": "description",
-            "args": null,
-            "storageKey": null
-          }
-        ]
-      }
-    ]
+    "selections": (v0/*: any*/)
   },
   "params": {
     "operationKind": "query",
     "name": "AppQuery",
     "id": null,
-    "text": "query AppQuery {\n  tasks {\n    _id\n    ...TaskList_task\n  }\n}\n\nfragment TaskList_task on tasks {\n  title\n  description\n}\n",
+    "text": "query AppQuery {\n  tasks {\n    _id\n    title\n    description\n  }\n}\n",
     "metadata": {}
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '6f8a8cc8654d82cd5d984006c7ee0ac1';
+(node/*: any*/).hash = 'ec3a1a9a7d1857a2478d160c8ca696d6';
 module.exports = node;

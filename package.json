@@ -40,6 +40,8 @@
   },
   "homepage": "https://github.com/mateusmforte/entria-fullstack-challenge#readme",
   "devDependencies": {
+    "get-graphql-schema": "^2.1.2",
+    "global": "^4.3.2",
     "lerna": "^3.13.3"
   }
 }

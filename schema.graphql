@@ -1,0 +1,15 @@
+schema {
+  query: getTasks
+}
+
+type getTasks {
+  task(_id: ID): tasks
+  tasks: [tasks]
+}
+
+type tasks {
+  _id: ID
+  title: String
+  description: String
+}
+

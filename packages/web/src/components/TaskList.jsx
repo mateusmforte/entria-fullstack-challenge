@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import {createFragmentContainer} from 'react-relay';
 import graphql from 'babel-plugin-relay/macro'
 
+
 class TaskTitle extends Component{
     render(){
         return(
@@ -21,20 +22,24 @@ class TaskDescription extends Component{
 class TaskList extends Component{
     render(){
         return(
-            <li className="tasks">
-                <TaskTitle title={this.props.title}/>
-                <TaskDescription description={this.props.description}/>
-            </li>
+            <div>
+                {this.props.tasks.map(tasks => (
+                    <li key={tasks._id} className="tasks">
+                        <TaskTitle title={tasks.title}/>
+                        <TaskDescription description={tasks.description}/>
+                    </li>
+                   )
+                )}
+            </div>    
         )
     }
-}
-
+} 
 export default createFragmentContainer(
     TaskList,
     graphql`
-        fragment TaskList_task on tasks{
+        fragment TaskList_tasks on tasks @relay(plural: true){
             title 
             description
         }
     `
-); 
+)
